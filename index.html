@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8e33e1dd0a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Forget it Not</title>
+  </head>
+  <body>
+    <div class="container alert-container hide">
+      <i class="fas fa-exclamation-circle"><span>There is an error</span></i>
+    </div>
+
+    <h1>Forget it Not!</h1>
+    <!-- Home Page-->
+    <div class="container home-container">
+      <i class="far fa-sticky-note notes"></i>
+      <div class="intro">
+        <p>
+          You can keep a variety of notes here, so you will never forget
+          anything, irrelevant or significant. Log in or register to use this
+          app.
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <i class="fas fa-user-plus" id="home-regBtn"></i>
+        <i class="fas fa-sign-in-alt" id="home-loginBtn"></i>
+      </div>
+    </div>
+
+    <!--Start Registration Page-->
+    <div class="container register-container hide">
+      <h1>Registration Form</h1>
+      <form class="reg-form">
+        <div class="mb-3">
+          <label for="fnameInput" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="fnameInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="lnameInput" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lnameInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="InputEmail" required />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="InputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword" />
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="CheckReg"
+            required
+          />
+          <label class="form-check-label" for="CheckReg"
+            >I agree to the Terms of Use</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary" id="regBtn">
+          Submit
+        </button>
+      </form>
+    </div>
+    <!--End Registration Page-->
+
+    <!--Start Login Page-->
+    <div class="container login-container hide">
+      <h1>Log in</h1>
+      <form>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailInput"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="passwordInput" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="passswordInput"
+            required
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="logCheck" />
+          <label class="form-check-label" for="logCheck">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="loginBtn">
+          Submit
+        </button>
+      </form>
+    </div>
+    <!--End Login Page-->
+
+    <!--Start Dashboard-->
+    <div class="container dashboard-container hide">
+      <h1>User Dashboard</h1>
+      <h3 class="welcome message"></h3>
+      <div class="userinfo">
+        <div class="user-email"></div>
+        <div class="user-current-list">
+          Your current lists are:
+          <ul>
+            <li>
+              There are no Task Lists in your account yet. Go ahead and click
+              that button!
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-primary submit" id="dashBtn">
+        Create New to-do List
+      </button>
+    </div>
+    <!-- End Dashboard -->
+
+    <!--Start Task List Page-->
+    <div class="container task-list-container hide">
+      <h1>Task List Form</h1>
+      <form class="reg-form">
+        <div class="mb-3">
+          <label for="task-titleInput" class="form-label"
+            >Give your list a title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="task-titleInput"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="task-textInput" class="form-label"
+            >Add tasks to the list</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="task-textInput"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <!--End Task List Page-->
+    <script src="app.js"></script>
+  </body>
+</html>
