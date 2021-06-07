@@ -2,7 +2,9 @@
 const homeContainer = document.querySelector(".home-container");
 const dashContainer = document.querySelector(".dashboard-container");
 const regContainer = document.querySelector(".register-container");
+const regForm = document.querySelector(".reg-form");
 const loginContainer = document.querySelector(".login-container");
+const logForm = document.querySelector(".login-form");
 const addTaskContainer = document.querySelector(".task-list-container");
 const HomeRegBtn = document.querySelector("#home-regBtn");
 const HomeLoginBtn = document.querySelector("#home-loginBtn");
@@ -24,7 +26,7 @@ HomeLoginBtn.addEventListener("click", (e) => {
 });
 
 //Registration
-regBtn.addEventListener("click", (e) => {
+regForm.addEventListener("submit", (e) => {
   e.preventDefault();
   regContainer.classList.add("hide");
   dashContainer.classList.remove("hide");
@@ -38,7 +40,7 @@ dashBtn.addEventListener("click", (e) => {
 });
 
 //Login
-loginBtn.addEventListener("click", (e) => {
+logForm.addEventListener("submit", (e) => {
   e.preventDefault();
   loginContainer.classList.add("hide");
   dashContainer.classList.remove("hide");
