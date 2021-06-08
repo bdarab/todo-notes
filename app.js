@@ -6,6 +6,7 @@ const regForm = document.querySelector(".reg-form");
 const loginContainer = document.querySelector(".login-container");
 const logForm = document.querySelector(".login-form");
 const addTaskContainer = document.querySelector(".task-list-container");
+const Alert = document.querySelector(".alert-container");
 const HomeRegBtn = document.querySelector("#home-regBtn");
 const HomeLoginBtn = document.querySelector("#home-loginBtn");
 const regBtn = document.querySelector("#regBtn");
