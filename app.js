@@ -3,6 +3,11 @@ const homeContainer = document.querySelector(".home-container");
 const dashContainer = document.querySelector(".dashboard-container");
 const regContainer = document.querySelector(".register-container");
 const regForm = document.querySelector(".reg-form");
+const userInput = document.querySelectorAll("regForm input");
+const fNameInput = document.querySelector("#fnameInput");
+const lNameInput = document.querySelector("#lnameInput");
+const emailInput = document.querySelector("#InputEmail");
+const passwordInput = document.querySelector("#InputPassword");
 const loginContainer = document.querySelector(".login-container");
 const logForm = document.querySelector(".login-form");
 const addTaskContainer = document.querySelector(".task-list-container");
@@ -27,11 +32,29 @@ HomeLoginBtn.addEventListener("click", (e) => {
 });
 
 //Registration
+
+let users = [];
+
 regForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  addUser(userInput.value);
   regContainer.classList.add("hide");
   dashContainer.classList.remove("hide");
 });
+
+addUser = (user) => {
+  if (user !== "") {
+    let user = {
+      fName: fNameInput.value,
+      lName: lNameInput.value,
+      email: emailInput.value,
+      password: passwordInput.value,
+    };
+    JSON.parse(localStorage.getItem([users]));
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify([users]));
+  }
+};
 
 //DashBoard
 dashBtn.addEventListener("click", (e) => {
