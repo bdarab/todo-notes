@@ -50,9 +50,8 @@ addUser = (user) => {
       email: emailInput.value,
       password: passwordInput.value,
     };
-    JSON.parse(localStorage.getItem([users]));
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify([users]));
+    const users = JSON.parse(localStorage.getItem("users"));
+    localStorage.setItem("users", JSON.stringify(users.concat(user)));
   }
 };
 
