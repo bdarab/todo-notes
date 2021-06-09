@@ -58,7 +58,7 @@ addUser = (user) => {
 //DashBoard
 dashBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  dashContainer.classList.add("hide");
+  dashContainer.innerHTML = dashContainer.classList.add("hide");
   addTaskContainer.classList.remove("hide");
 });
 
